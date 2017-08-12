@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0"
+      style="-fx-spacing: 8px; -fx-padding: 8px;"
+      xmlns="http://javafx.com/javafx/8.0.121"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.feint.fx.MainController">
+   <children>
+      <TableView fx:id="pwdTable" prefHeight="200.0" prefWidth="200.0" />
+      <Label fx:id="errLabel" style="-fx-text-fill: red;" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 16px;">
+         <children>
+            <JFXTextField fx:id="pwdField" promptText="请输入密码" />
+            <JFXTextField fx:id="topicField" promptText="请输入主题" />
+         </children>
+      </HBox>
+      <JFXButton mnemonicParsing="false" onAction="#insert"
+                 style="-fx-background-color: #3895f3;" text="插入数据" textFill="WHITE" />
+      <JFXButton mnemonicParsing="false" onAction="#select" text="显示所有数据" />
+   </children>
+</VBox>
